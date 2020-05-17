@@ -18,9 +18,10 @@ const SearchForm = () => {
       .then((data) => {
         return data.json();
       })
-      .then((res) => {
-        console.log(res);
-        setLyrics(res);
+      .then((res = {}) => {
+        const parsedLyrics = (res.lyrics || '').split('\n');
+
+        setLyrics(parsedLyrics);
       });
   };
 
@@ -58,7 +59,15 @@ const SearchForm = () => {
 
       {/* {lyrics ? <p>{LyricLines}</p> : <p>Search for lyrics already</p>} */}
       {/* {lyrics ? {lyrics.lyrics} : <p>Search for Lyrics</p>} */}
-      {lyrics ? <p>{lyrics.lyrics}</p> : <p>Search for lyrics already</p>}
+      {lyrics ? (
+        <div>
+          {lyrics.map((line, i) => (
+            <p key={i}>{line}</p>
+          ))}
+        </div>
+      ) : (
+        <p>Search for lyrics already</p>
+      )}
     </>
   );
 };
