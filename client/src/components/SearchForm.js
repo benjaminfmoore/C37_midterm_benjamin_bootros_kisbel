@@ -19,10 +19,14 @@ const SearchForm = () => {
         return data.json();
       })
       .then((res = {}) => {
+        console.log(res)
         const parsedLyrics = (res.lyrics || '').split('\n');
-
-        setLyrics(parsedLyrics);
-      });
+        if (parsedLyrics.length > 1){
+          setLyrics(parsedLyrics);
+        }else{
+          setLyrics(["Sorry, no matches found!"])
+        }
+      })
   };
 
   // const LyricLines = () => {
@@ -32,42 +36,44 @@ const SearchForm = () => {
 
   return (
     <>
-      <Form onSubmit={handleSubmit}>
+      <Form className="searchForm" onSubmit={handleSubmit}>
+
+  
         <Form.Row>
           <Form.Control
             id="artistSearch"
             size="lg"
             type="text"
-            placeholder="Seaching artist"
+            placeholder="enter artist name... "
             defaultValue={artist}
             onChange={(e) => setArtist(e.target.value)}
           />
         </Form.Row>
+
+ 
         <Form.Row>
           <Form.Control
             id="songSearch"
             size="lg"
             type="text"
-            placeholder="searching title"
+            placeholder="enter song title..."
             defaultValue={title}
             onChange={(e) => setTitle(e.target.value)}
           />
         </Form.Row>
+
+
+        <div id="break"><br></br></div>
         <button type="submit">Submit</button>
       </Form>
-      {/* {apiData && apiData.map((recipe) => <div>{recipe.strMeal}</div>)} */}
 
-      {/* {lyrics ? <p>{LyricLines}</p> : <p>Search for lyrics already</p>} */}
-      {/* {lyrics ? {lyrics.lyrics} : <p>Search for Lyrics</p>} */}
-      {lyrics ? (
-        <div>
+      {lyrics &&
+        <div id="lyrics">
           {lyrics.map((line, i) => (
             <p key={i}>{line}</p>
           ))}
         </div>
-      ) : (
-        <p>Search for lyrics already</p>
-      )}
+    }
     </>
   );
 };
