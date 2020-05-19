@@ -1,22 +1,27 @@
-import React from "react";
-
+import React from 'react';
+import cd from '../pictures/cd-png-10.png';
+import record from '../pictures/record PNG.png';
+import cassette from '../pictures/cassette.png';
 
 function Footer() {
-    return (
-        <footer class="site-footer">
-            <a href="" id="recordButton">
-                <img src="" width="40" height="40"/>
-            </a>
+  return (
+    <footer class="site-footer">
+      <div id="createdBy">
+        <p>Created by Kisbel and Benjamin at Wyncode!</p>
+      </div>
+      <a href="" id="recordButton">
+        <img src={record} width="40" height="40" />
+      </a>
 
-            <a href="" id="cassetteButton"> 
-                <img src="../C37_midterm_benjamin_bootros_kisbel/client/src/pictures/audio_cassette_PNG92152.png" width="40" height="40"/>
-            </a>
+      <a href="" id="cassetteButton">
+        <img src={cassette} width="40" height="40" />
+      </a>
 
-            <a href="" id="cdButton">
-                <img src="../C37_midterm_benjamin_bootros_kisbel/client/src/pictures/cd-png-10.png" width="40" height="40"/>
-            </a>
-      </footer>
-    );
+      <a href="" id="cdButton">
+        <img src={cd} width="40" height="40" />
+      </a>
+    </footer>
+  );
 }
 
 export default Footer;

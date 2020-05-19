@@ -19,14 +19,14 @@ const SearchForm = () => {
         return data.json();
       })
       .then((res = {}) => {
-        console.log(res)
+        console.log(res);
         const parsedLyrics = (res.lyrics || '').split('\n');
-        if (parsedLyrics.length > 1){
+        if (parsedLyrics.length > 1) {
           setLyrics(parsedLyrics);
-        }else{
-          setLyrics(["Sorry, no matches found!"])
+        } else {
+          setLyrics(['Sorry, no matches found!']);
         }
-      })
+      });
   };
 
   // const LyricLines = () => {
@@ -37,8 +37,6 @@ const SearchForm = () => {
   return (
     <>
       <Form className="searchForm" onSubmit={handleSubmit}>
-
-  
         <Form.Row>
           <Form.Control
             id="artistSearch"
@@ -50,7 +48,6 @@ const SearchForm = () => {
           />
         </Form.Row>
 
- 
         <Form.Row>
           <Form.Control
             id="songSearch"
@@ -62,18 +59,21 @@ const SearchForm = () => {
           />
         </Form.Row>
 
-
-        <div id="break"><br></br></div>
-        <button type="submit">Submit</button>
+        <div id="break">
+          <br></br>
+        </div>
+        <button type="submit" className="searchForm">
+          Submit
+        </button>
       </Form>
 
-      {lyrics &&
+      {lyrics && (
         <div id="lyrics">
           {lyrics.map((line, i) => (
             <p key={i}>{line}</p>
           ))}
         </div>
-    }
+      )}
     </>
   );
 };
