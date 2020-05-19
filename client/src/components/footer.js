@@ -1,11 +1,12 @@
 import React from "react";
 
+import foo from '../pictures/cd-png-10.png'
 
 function Footer() {
     return (
         <footer class="site-footer">
             <a href="" id="recordButton">
-                <img src="" width="40" height="40"/>
+                <img src={foo} width="40" height="40"/>
             </a>
 
             <a href="" id="cassetteButton"> 

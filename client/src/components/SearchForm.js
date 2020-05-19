@@ -36,9 +36,9 @@ const SearchForm = () => {
 
   return (
     <>
-      <Form className="searchForm" onSubmit={handleSubmit}>
+      <Form className="searchForm" onSubmit={handleSubmit} style={{display: 'flex'}}>
 
-  
+  <div>
         <Form.Row>
           <Form.Control
             id="artistSearch"
@@ -47,6 +47,8 @@ const SearchForm = () => {
             placeholder="enter artist name... "
             defaultValue={artist}
             onChange={(e) => setArtist(e.target.value)}
+            autoComplete="off"
+            autoFocus 
           />
         </Form.Row>
 
@@ -59,16 +61,17 @@ const SearchForm = () => {
             placeholder="enter song title..."
             defaultValue={title}
             onChange={(e) => setTitle(e.target.value)}
+            autoComplete="off"
           />
         </Form.Row>
+        </div>
 
-
-        <div id="break"><br></br></div>
-        <button type="submit">Submit</button>
+        {/* <div id="break"><br></br></div> */}
+        <button type="submit" className="btn btn-light">Submit</button>
       </Form>
 
       {lyrics &&
-        <div id="lyrics">
+        <div id="lyrics" className="p-5 shadow-lg">
           {lyrics.map((line, i) => (
             <p key={i}>{line}</p>
           ))}
