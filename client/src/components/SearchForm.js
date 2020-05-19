@@ -36,13 +36,9 @@ const SearchForm = () => {
 
   return (
     <>
-<<<<<<< HEAD
       <Form className="searchForm" onSubmit={handleSubmit} style={{display: 'flex'}}>
 
   <div>
-=======
-      <Form className="searchForm" onSubmit={handleSubmit}>
->>>>>>> origin/master
         <Form.Row>
           <Form.Control
             id="artistSearch"
@@ -69,25 +65,12 @@ const SearchForm = () => {
         </Form.Row>
         </div>
 
-<<<<<<< HEAD
         {/* <div id="break"><br></br></div> */}
         <button type="submit" className="btn btn-light">Submit</button>
       </Form>
 
       {lyrics &&
         <div id="lyrics" className="p-5 shadow-lg">
-=======
-        <div id="break">
-          <br></br>
-        </div>
-        <button type="submit" className="searchForm">
-          Submit
-        </button>
-      </Form>
-
-      {lyrics && (
-        <div id="lyrics">
->>>>>>> origin/master
           {lyrics.map((line, i) => (
             <p key={i}>{line}</p>
           ))}
