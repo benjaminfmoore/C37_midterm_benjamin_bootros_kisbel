@@ -31,7 +31,6 @@ h1 {
   justify-content: center;
   margin-top: 30vh;
   margin-bottom: 2vh;
-
 }
 
 .content {
@@ -111,9 +110,9 @@ button:hover {
 }
 
 .searchForm {
-  display: flex; 
+  display: flex;
   flex-direction: row;
-  justify-content: center; 
+  justify-content: center;
 }
 
 #artistSearch:focus {
@@ -132,3 +131,10 @@ button:hover {
   margin-top: 12px;
 }
 
+.nav-ul {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-inline-start: 30%;
+  margin-inline-end: 30%;
+}
