@@ -3,6 +3,7 @@ import SearchForm from './components/SearchForm';
 import { Container } from 'react-bootstrap';
 import Footer from './components/footer';
 import './App.css';
+import './index.css';
 
 const App = () => {
   return (

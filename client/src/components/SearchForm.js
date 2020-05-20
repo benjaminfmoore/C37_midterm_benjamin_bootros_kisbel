@@ -75,7 +75,7 @@ const SearchForm = () => {
             <p key={i}>{line}</p>
           ))}
         </div>
-      )}
+      }
     </>
   );
 };
