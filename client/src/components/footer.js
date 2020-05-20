@@ -5,7 +5,7 @@ import cassette from '../pictures/cassette.png';
 
 function Footer() {
   return (
-    <footer class="site-footer">
+    <footer className="site-footer">
       <div id="createdBy">
         <p>Created by Kisbel and Benjamin at Wyncode!</p>
       </div>
