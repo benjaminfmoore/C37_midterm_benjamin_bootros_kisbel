@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
-body {
+.app-Container {
+  height: 100vh;
   background-image: linear-gradient(rgb(243, 242, 242), rgb(165, 164, 164));
   display: flex;
   flex-direction: column;
@@ -8,20 +9,33 @@ body {
   background-attachment: fixed;
 }
 
-/* .body-cassette {
-  background-image: url('../C37_midterm_benjamin_bootros_kisbel/client/src/pictures/cassette.png');
-  background-attachment: fixed;
+#recordButton {
+  transform: scale(.8);
+  height: 50px;
+  background-color: transparent;
+  border: none;
 }
 
-.body-cd {
-  background-image: url('../C37_midterm_benjamin_bootros_kisbel/client/src/pictures/cd-png-10.png');
-  background-attachment: fixed;
+#cassetteButton {
+  transform: scale(.8);
+  height: 50px;
+  background-color: transparent;
+  border: none;
 }
 
-.body-record {
-  background-image: url('../C37_midterm_benjamin_bootros_kisbel/client/src/pictures/record PNG.png');
-  background-attachment: fixed;
-} */
+#cdButton {
+  transform: scale(.8);
+  height: 50px;
+  background-color: transparent;
+  border: none;
+}
+
+#greyButton {
+  transform: scale(.8);
+  height: 50px;
+  background-color: transparent;
+  border: none;
+}
 
 h1 {
   font-size: 72px;
@@ -29,7 +43,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 30vh;
+  margin-top: 19vh;
   margin-bottom: 2vh;
 }
 
@@ -138,3 +152,4 @@ button:hover {
   margin-inline-start: 30%;
   margin-inline-end: 30%;
 }
+
