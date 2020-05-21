@@ -8,7 +8,12 @@ const NavBar = () => (
     <nav className="navbar">
       <ul className="nav-ul">
         <li className="navbar-items">
-          <NavLink to="/" exact>
+          <NavLink
+            to="/"
+            activeStyle={{ fontWeight: 'bold', color: 'red' }}
+            className="navlink-change"
+            exact
+          >
             Home
           </NavLink>
         </li>
@@ -22,7 +27,12 @@ const NavBar = () => (
           />
         </li>
         <li className="navbar-items">
-          <NavLink to="/about" exact>
+          <NavLink
+            to="/about"
+            activeStyle={{ fontWeight: 'bold', color: 'red' }}
+            className="navlink-change"
+            exact
+          >
             About Us
           </NavLink>
         </li>
