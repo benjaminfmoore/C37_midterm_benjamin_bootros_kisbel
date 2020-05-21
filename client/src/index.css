@@ -1,40 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
-.app-Container {
+/* OVERALL BODY CSS */
+.app-container {
   height: 100vh;
-  background-image: linear-gradient(rgb(243, 242, 242), rgb(165, 164, 164));
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-  background-attachment: fixed;
-}
-
-#recordButton {
-  transform: scale(.8);
-  height: 50px;
-  background-color: transparent;
-  border: none;
-}
-
-#cassetteButton {
-  transform: scale(.8);
-  height: 50px;
-  background-color: transparent;
-  border: none;
-}
-
-#cdButton {
-  transform: scale(.8);
-  height: 50px;
-  background-color: transparent;
-  border: none;
-}
-
-#greyButton {
-  transform: scale(.8);
-  height: 50px;
-  background-color: transparent;
-  border: none;
+  width: 100vw;
+  background-size: 100%;
+  background-repeat: repeat-y;
 }
 
 h1 {
@@ -54,33 +25,6 @@ h1 {
   margin-right: 75px;
 }
 
-#lyrics {
-  text-align: center;
-  background-color: white;
-  margin-right: 250px;
-  margin-left: 250px;
-  margin-top: 30px;
-  margin-bottom: 70px;
-}
-
-.site-footer {
-  position: fixed;
-  display: flex;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: rgb(32, 32, 32);
-  text-align: center;
-  justify-content: flex-end;
-}
-#createdBy {
-  display: flex;
-  margin-inline-end: auto;
-  margin-inline-start: auto;
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 a {
   margin-right: 7px;
   margin-left: 7px;
@@ -91,6 +35,41 @@ h3 {
   font-size: 20px;
   justify-content: flex-end;
   flex-wrap: wrap;
+}
+
+#break {
+  flex-basis: 100%;
+  height: 0;
+}
+
+/* FOOTER CSS */
+
+#recordButton {
+  transform: scale(0.8);
+  height: 50px;
+  background-color: transparent;
+  border: none;
+}
+
+#cassetteButton {
+  transform: scale(0.8);
+  height: 50px;
+  background-color: transparent;
+  border: none;
+}
+
+#cdButton {
+  transform: scale(0.8);
+  height: 50px;
+  background-color: transparent;
+  border: none;
+}
+
+#greyButton {
+  transform: scale(0.8);
+  height: 50px;
+  background-color: transparent;
+  border: none;
 }
 
 button {
@@ -106,10 +85,26 @@ button:hover {
   cursor: pointer;
 }
 
-#break {
-  flex-basis: 100%;
-  height: 0;
+.site-footer {
+  position: fixed;
+  display: flex;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(32, 32, 32);
+  text-align: center;
+  justify-content: flex-end;
 }
+
+#createdBy {
+  display: flex;
+  margin-inline-end: auto;
+  margin-inline-start: auto;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* SEARCH & LYRICS CSS */
 
 #form.Control {
   display: flex;
@@ -145,7 +140,20 @@ button:hover {
   margin-top: 12px;
 }
 
+#lyrics {
+  text-align: center;
+  background-color: white;
+  margin-right: 250px;
+  margin-left: 250px;
+  margin-top: 30px;
+  margin-bottom: 70px;
+}
+
+/* NAV BAR CSS */
+
 .nav-ul {
+  align-items: center;
+  list-style: none;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -153,3 +161,62 @@ button:hover {
   margin-inline-end: 30%;
 }
 
+.navlink-change {
+  background: transparent;
+  color: black;
+}
+
+/* ABOUT US CSS */
+
+h2 {
+  font-size: 72px;
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  height: 100%;
+  margin: 0px;
+  width: 100%;
+}
+
+#about-lyrically {
+  display: flex;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#about-kis {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 25px;
+  justify-content: center;
+}
+
+#about-ben {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 25px;
+  justify-content: center;
+}
+
+#about-wyncoders {
+  display: flex;
+  justify-content: space-between;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.break {
+  display: flex;
+  flex-basis: 100%;
+  height: 0;
+}
+
+.aboutUsContainer {
+  text-align: center;
+  background-color: white;
+  margin-right: 200px;
+  margin-left: 200px;
+  margin-top: 30px;
+  margin-bottom: 70px;
+}
