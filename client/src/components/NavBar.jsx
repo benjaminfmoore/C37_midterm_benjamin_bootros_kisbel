@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import '../index.css';
 import logo from '../pictures/logo.png';
 
@@ -6,7 +7,11 @@ const NavBar = () => (
   <>
     <nav className="navbar">
       <ul className="nav-ul">
-        <li className="navbar-items">Home</li>
+        <li className="navbar-items">
+          <NavLink to="/" exact>
+            Home
+          </NavLink>
+        </li>
         <li className="navbar-items">
           <img
             src={logo}
@@ -16,7 +21,11 @@ const NavBar = () => (
             className="navbar-logo"
           />
         </li>
-        <li className="navbar-items">About us</li>
+        <li className="navbar-items">
+          <NavLink to="/about" exact>
+            About Us
+          </NavLink>
+        </li>
       </ul>
     </nav>
     ;
