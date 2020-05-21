@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import SearchForm from './components/SearchForm';
 import { Container } from 'react-bootstrap';
 import Footer from './components/footer';
@@ -9,6 +10,9 @@ import CassetteBackground from './pictures/cassette.png';
 import CDBackground from './pictures/cd-png-10.png';
 import RecordBackground from './pictures/record.png';
 import GreyBackground from './pictures/grey.png'
+
+
+import AboutUs from './components/AboutUs';
 
 
 const App = () => {
@@ -23,14 +27,22 @@ const App = () => {
 
   
   return (
-    <div className="app-container" style={{ backgroundImage: `url(${backgroundImg})` }}>
+
+    <Router>
+       <div className="app-container" style={{ backgroundImage: `url(${backgroundImg})` }}>
       <NavBar />
-      <h1>LYRICALLY</h1>
-      <Container>
-        <SearchForm />
-      </Container>
-      <Footer handleBackgroundChange={handleBackgroundChange} />
-    </div>
+      <Switch>
+        <Route exact path="/">
+          <Container>
+            <h1>LYRICALLY</h1>
+            <SearchForm />
+          </Container>
+        </Route>
+        <Route exact path="/about" component={AboutUs} />
+      </Switch>
+     <Footer handleBackgroundChange={handleBackgroundChange} />
+    </div> 
+    </Router>
   );
 };
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import '../index.css';
-import Benprofile from './picture/Ben-profile';
+import Ben from '../pictures/Ben.jpeg';
 
 function AboutUs() {
   return (
@@ -27,7 +27,7 @@ function AboutUs() {
         </div>
 
         <div id="about-ben">
-          <img src={Benprofile} alt="picture of ben" />
+          <img src={Ben} alt="picture of ben" />
           <div class="break"></div>
           <p>
             Ben is a student at Wyncode, veteran and overall geek. He wanted to
